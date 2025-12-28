@@ -1,0 +1,216 @@
+---
+// Services Component
+// Three service cards with tilt effect
+---
+
+<section class="services reveal" id="services">
+    <div class="section-header">
+        <div class="section-label">Mes Services</div>
+        <h2 class="section-title">Comment je vous aide à performer</h2>
+        <p class="section-subtitle">Une approche en deux temps pour des résultats durables</p>
+    </div>
+    
+    <div class="services-grid">
+        <article class="service-card tilt">
+            <div class="service-number">01</div>
+            <h3>PHASE 1 : FIX & SECURE</h3>
+            <p class="service-tagline">Sécuriser vos fondations analytics</p>
+            <ul>
+                <li>Audit Analytics complet (GA4, GTM)</li>
+                <li>Migration et setup GA4 avancé</li>
+                <li>Tracking Server-Side (sGTM)</li>
+                <li>Conformité RGPD & Consent Mode V2</li>
+            </ul>
+        </article>
+        
+        <article class="service-card tilt">
+            <div class="service-number">02</div>
+            <h3>PHASE 2 : SCALE & ROI</h3>
+            <p class="service-tagline">Optimiser votre performance</p>
+            <ul>
+                <li>Dashboards stratégiques (Looker Studio)</li>
+                <li>Analyse de funnel & attribution</li>
+                <li>CRO & optimisation continue</li>
+                <li>Recommandations data-driven</li>
+            </ul>
+        </article>
+        
+        <article class="service-card tilt">
+            <div class="service-number">03</div>
+            <h3>LABO SERVER-SIDE</h3>
+            <p class="service-tagline">Architecture validée en labo</p>
+            <ul>
+                <li>Architecture Google Cloud Run</li>
+                <li>Facebook Conversions API (CAPI)</li>
+                <li>Bypass ITP & First-Party Data</li>
+                <li>Prêt à déployer chez vous</li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<style>
+    .services {
+        padding: 8rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .section-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-blue) 100%);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        animation: gradientShift 3s ease infinite;
+    }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+        color: var(--color-gray);
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--color-border);
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+        animation: rotateGradient 3s linear infinite;
+    }
+
+    @keyframes rotateGradient {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .service-card:hover {
+        border-color: var(--color-gold);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
+                    0 0 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .service-number {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-blue) 100%);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+        line-height: 1;
+        animation: gradientShift 3s ease infinite;
+    }
+
+    .service-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+    }
+
+    .service-tagline {
+        font-size: 0.95rem;
+        color: var(--color-lime);
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    .service-card ul {
+        list-style: none;
+    }
+
+    .service-card li {
+        padding: 0.75rem 0;
+        color: var(--color-gray);
+        font-size: 0.9rem;
+        line-height: 1.7;
+        position: relative;
+        padding-left: 1.75rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .service-card li:last-child {
+        border-bottom: none;
+    }
+
+    .service-card li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--color-blue);
+        font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .services {
+            padding: 5rem 2rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+</style>

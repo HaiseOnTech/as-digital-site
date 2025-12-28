@@ -1,0 +1,126 @@
+---
+// Trust Component
+// "Pourquoi me faire confiance" section with 3 proof cards
+---
+
+<section class="trust reveal">
+    <div class="section-header">
+        <div class="section-label">Mes Preuves</div>
+        <h2 class="section-title">Pourquoi me faire confiance ?</h2>
+    </div>
+    
+    <div class="trust-grid">
+        <article class="trust-card">
+            <div class="trust-icon">✓</div>
+            <h3>Rigueur Grands Comptes</h3>
+            <p>Formé chez GroupM sur des clients premium : Proximus, Polestar, Mazda. Standards exigeants, livrables impeccables.</p>
+        </article>
+        
+        <article class="trust-card">
+            <div class="trust-icon">⚡</div>
+            <h3>Pont IT ↔ Marketing</h3>
+            <p>Je parle aux devs ET aux décideurs. Je fais le lien entre vos équipes techniques et business.</p>
+        </article>
+        
+        <article class="trust-card">
+            <div class="trust-icon">💎</div>
+            <h3>Senior Technical Honesty</h3>
+            <p>Je dis ce qui marche, pas ce qui se vend. Transparence totale sur ce qui est possible et pertinent.</p>
+        </article>
+    </div>
+</section>
+
+<style>
+    .trust {
+        padding: 6rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-blue) 100%);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        animation: gradientShift 3s ease infinite;
+    }
+
+    .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .trust-card {
+        text-align: center;
+        padding: 3rem 2rem;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--color-border);
+        border-radius: 20px;
+        transition: all 0.4s ease;
+    }
+
+    .trust-card:hover {
+        border-color: var(--color-gold);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .trust-icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1.5rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+    }
+
+    .trust-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--color-gold);
+    }
+
+    .trust-card p {
+        color: var(--color-gray);
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .trust {
+            padding: 5rem 2rem;
+        }
+
+        .trust-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

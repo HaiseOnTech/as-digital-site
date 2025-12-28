@@ -1,0 +1,20 @@
+{
+  "name": "as-digital-solutions",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Site vitrine AS Digital Solutions - Aïdi Sélim - Data Copilot & Consultant Analytics",
+  "author": "Aïdi Sélim",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.0",
+    "astro": "^5.16.6"
+  }
+}
