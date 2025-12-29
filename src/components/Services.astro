@@ -1,51 +1,111 @@
 ---
 // Services Component
-// Three service cards with tilt effect
+// Two service cards + Trust guarantee block
 ---
 
 <section class="services reveal" id="services">
     <div class="section-header">
         <div class="section-label">Mes Services</div>
-        <h2 class="section-title">Comment je vous aide à performer</h2>
-        <p class="section-subtitle">Une approche en deux temps pour des résultats durables</p>
+        <h2 class="section-title">Mon Accompagnement Data</h2>
+        <p class="section-subtitle">De la fiabilité technique à la performance business.</p>
     </div>
     
     <div class="services-grid">
+        <!-- CARTE 1 : ARCHITECTURE & RELIABILITY -->
         <article class="service-card tilt">
             <div class="service-number">01</div>
-            <h3>PHASE 1 : FIX & SECURE</h3>
+            <h3>ARCHITECTURE & RELIABILITY</h3>
             <p class="service-tagline">Sécuriser vos fondations analytics</p>
-            <ul>
-                <li>Audit Analytics complet (GA4, GTM)</li>
-                <li>Migration et setup GA4 avancé</li>
-                <li>Tracking Server-Side (sGTM)</li>
-                <li>Conformité RGPD & Consent Mode V2</li>
-            </ul>
+            
+            <div class="service-items">
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Audit & Assainissement Data</h4>
+                        <p>Diagnostic complet GA4/GTM et correction des écarts de tracking.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Infrastructure Server-Side (Cloud Run)</h4>
+                        <p>Architecture propriétaire sur Google Cloud. Pas de location, c'est à vous.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Tracking Haute Fidélité</h4>
+                        <p>Facebook CAPI & Google Ads avec déduplication stricte des conversions.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Conformité & Privacy</h4>
+                        <p>Consent Mode V2 et cookies First-Party pour un tracking RGPD-proof.</p>
+                    </div>
+                </div>
+            </div>
         </article>
         
+        <!-- CARTE 2 : BUSINESS COPILOT & ROI -->
         <article class="service-card tilt">
             <div class="service-number">02</div>
-            <h3>PHASE 2 : SCALE & ROI</h3>
-            <p class="service-tagline">Optimiser votre performance</p>
-            <ul>
-                <li>Dashboards stratégiques (Looker Studio)</li>
-                <li>Analyse de funnel & attribution</li>
-                <li>CRO & optimisation continue</li>
-                <li>Recommandations data-driven</li>
-            </ul>
+            <h3>BUSINESS COPILOT & ROI</h3>
+            <p class="service-tagline">Activer votre croissance</p>
+            
+            <div class="service-items">
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Dashboards Décisionnels</h4>
+                        <p>Rapports Looker Studio connectés pour piloter le ROI réel.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Analyse CRO & UX</h4>
+                        <p>Étude des parcours utilisateurs pour débloquer les conversions.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Maintenance & Veille</h4>
+                        <p>Monitoring proactif du serveur et mises à jour ITP/Privacy.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <span class="service-item-icon">→</span>
+                    <div class="service-item-content">
+                        <h4>Comité Stratégique</h4>
+                        <p>Point mensuel pour traduire la donnée en plan d'action.</p>
+                    </div>
+                </div>
+            </div>
         </article>
-        
-        <article class="service-card tilt">
-            <div class="service-number">03</div>
-            <h3>LABO SERVER-SIDE</h3>
-            <p class="service-tagline">Architecture validée en labo</p>
-            <ul>
-                <li>Architecture Google Cloud Run</li>
-                <li>Facebook Conversions API (CAPI)</li>
-                <li>Bypass ITP & First-Party Data</li>
-                <li>Prêt à déployer chez vous</li>
-            </ul>
-        </article>
+    </div>
+
+    <!-- BLOC GARANTIE -->
+    <div class="trust-block">
+        <div class="trust-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+            </svg>
+        </div>
+        <h4 class="trust-title">La Garantie <span>"Senior Technical Honesty"</span></h4>
+        <p class="trust-text">
+            <strong>Je ne teste pas chez vous.</strong> Chaque architecture, chaque script et chaque mise à jour est d'abord validé dans mon <strong>Labo Server-Side interne</strong> (Environnement Sandbox Astro/Cloud Run). Je ne déploie en production que ce qui est <strong>stable, sécurisé et performant</strong>.
+        </p>
     </div>
 </section>
 
@@ -94,10 +154,14 @@
         margin-right: auto;
     }
 
+    /* ============================================
+       SERVICES GRID - 2 COLONNES
+    ============================================ */
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        margin-bottom: 3rem;
     }
 
     .service-card {
@@ -116,88 +180,159 @@
     .service-card::before {
         content: '';
         position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--color-gold), var(--color-blue));
         opacity: 0;
-        transition: opacity 0.5s ease;
-        pointer-events: none;
+        transition: opacity 0.3s ease;
     }
 
     .service-card:hover::before {
         opacity: 1;
-        animation: rotateGradient 3s linear infinite;
-    }
-
-    @keyframes rotateGradient {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
     }
 
     .service-card:hover {
         border-color: var(--color-gold);
+        transform: translateY(-5px);
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
-                    0 0 40px rgba(212, 175, 55, 0.2);
+                    0 0 40px rgba(212, 175, 55, 0.15);
     }
 
     .service-number {
         font-family: var(--font-display);
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: 800;
         background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-blue) 100%);
-        background-size: 200% 200%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 1.5rem;
+        opacity: 0.3;
         line-height: 1;
-        animation: gradientShift 3s ease infinite;
+        margin-bottom: 0.5rem;
     }
 
     .service-card h3 {
         font-family: var(--font-display);
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
         letter-spacing: -0.01em;
+        color: var(--color-white);
     }
 
     .service-tagline {
         font-size: 0.95rem;
-        color: var(--color-lime);
+        color: var(--color-gold);
         font-style: italic;
         margin-bottom: 2rem;
     }
 
-    .service-card ul {
-        list-style: none;
+    /* ============================================
+       SERVICE ITEMS
+    ============================================ */
+    .service-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
-    .service-card li {
-        padding: 0.75rem 0;
-        color: var(--color-gray);
-        font-size: 0.9rem;
-        line-height: 1.7;
-        position: relative;
-        padding-left: 1.75rem;
-        border-bottom: 1px solid var(--color-border);
+    .service-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
     }
 
-    .service-card li:last-child {
-        border-bottom: none;
-    }
-
-    .service-card li::before {
-        content: '→';
-        position: absolute;
-        left: 0;
-        color: var(--color-blue);
+    .service-item-icon {
+        color: var(--color-gold);
         font-weight: 700;
+        font-size: 1rem;
+        margin-top: 2px;
+        flex-shrink: 0;
     }
 
-    /* Responsive */
+    .service-item-content h4 {
+        font-family: var(--font-display);
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-white);
+        margin-bottom: 0.25rem;
+    }
+
+    .service-item-content p {
+        font-size: 0.85rem;
+        color: var(--color-gray);
+        line-height: 1.5;
+    }
+
+    /* ============================================
+       TRUST BLOCK
+    ============================================ */
+    .trust-block {
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+        border: 1px solid #1a1a1a;
+        border-radius: 16px;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+
+    .trust-block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, #d4af37, #0ea5e9);
+    }
+
+    .trust-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d4af37;
+    }
+
+    .trust-title {
+        font-family: 'Syne', var(--font-display), sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 16px;
+    }
+
+    .trust-title span {
+        background: linear-gradient(135deg, #d4af37 0%, #0ea5e9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .trust-text {
+        font-size: 0.9rem;
+        color: #737373;
+        line-height: 1.7;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .trust-text strong {
+        color: #ffffff;
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
     @media (max-width: 1024px) {
         .services {
             padding: 5rem 2rem;
@@ -205,12 +340,37 @@
 
         .services-grid {
             grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2.5rem;
         }
     }
 
     @media (max-width: 768px) {
         .section-title {
             font-size: 2rem;
+        }
+
+        .service-number {
+            font-size: 3rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+        }
+
+        .trust-block {
+            padding: 2rem;
+        }
+
+        .trust-title {
+            font-size: 1.1rem;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
         }
     }
 </style>
