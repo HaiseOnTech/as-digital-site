@@ -6,12 +6,12 @@ export interface Props {
 }
 
 const { 
-  title = "Aïdi Sélim - Digital Solutions | Data Copilot & Consultant Analytics",
+  title = "Sélim Aïdi | Data Copilot & Consultant Analytics",
   description = "Data Copilot & Consultant Analytics. Tracking fiable (GA4, Server-Side), dashboards et CRO. Je transforme vos données en décisions qui maximisent votre ROI.",
   lang = "fr"
 } = Astro.props;
 
-const siteUrl = "https://asdigitalsolutions.pro";
+const siteUrl = "https://selimaidi.com";
 const ogImage = `${siteUrl}/og-image.jpg`;
 ---
 
@@ -25,7 +25,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="Data Copilot, Consultant Analytics, GA4, Server-Side GTM, sGTM, Tracking, Dashboards, CRO, Performance digitale, Google Tag Manager">
-    <meta name="author" content="Aïdi Sélim">
+    <meta name="author" content="Sélim Aïdi">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href={siteUrl}>
     
@@ -36,7 +36,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     <meta property="og:description" content={description}>
     <meta property="og:image" content={ogImage}>
     <meta property="og:locale" content="fr_BE">
-    <meta property="og:site_name" content="AS Digital Solutions">
+    <meta property="og:site_name" content="Sélim Aïdi">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -59,7 +59,6 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     
     <!-- ============================================
          CONSENT MODE V2 - MUST BE BEFORE GTM
-         Configure your CMP (Cookiebot, Axeptio, etc.) to update these values
     ============================================ -->
     <script is:inline>
         window.dataLayer = window.dataLayer || [];
@@ -96,22 +95,18 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     -->
     
     <!-- ============================================
-         GTM HEAD SCRIPT - Paste your GTM code here
+         GTM HEAD SCRIPT
     ============================================ -->
-    <!-- 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
-    -->
+    })(window,document,'script','dataLayer','GTM-TTRKSJ4N');</script>
 </head>
 <body>
-    <!-- GTM BODY NOSCRIPT - Paste your GTM noscript here -->
-    <!--
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    <!-- GTM BODY NOSCRIPT -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTRKSJ4N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    -->
 
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress"></div>
@@ -334,9 +329,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
         pointer-events: none;
         z-index: 10000;
         mix-blend-mode: difference;
-        /* On garde le translate pour que le cercle soit bien centré sur la pointe */
         transform: translate(-50%, -50%);
-        /* On enlève 'transform' de la transition pour que le mouvement soit instantané */
         transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
     }
 
