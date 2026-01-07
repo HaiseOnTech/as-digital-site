@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://asdigitalsolutions.pro',
+  site: 'https://selimaidi.com',
   integrations: [
     sitemap()
   ],
