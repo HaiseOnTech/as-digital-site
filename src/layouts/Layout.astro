@@ -84,24 +84,17 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     </script>
     
     <!-- ============================================
-         CMP PLACEHOLDER - Add your CMP script here
-         Examples: Cookiebot, Axeptio, CookieYes, OneTrust
+         CMP - Cookiebot
     ============================================ -->
-     
-   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" 
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" 
         data-cbid="0a04937e-92a3-4525-a4a5-c13c953305af" 
         data-blockingmode="auto" 
         type="text/javascript"></script>
     
-    
     <!-- ============================================
-         GTM HEAD SCRIPT
+         GTM HEAD SCRIPT (Stape Custom Loader)
     ============================================ -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://metrics.selimaidi.com/15itptlyfu.js?'+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TTRKSJ4N');</script>
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://metrics.selimaidi.com/15itptlyfu.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','1c=HAJEKyA9WT0hNDI%2FPkQ6TwNbS0JFVhAHSBUcAB0dFQARD1cPGx0%3D');</script>
 </head>
 <body>
     <!-- GTM BODY NOSCRIPT -->
